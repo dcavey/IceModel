@@ -1,0 +1,4 @@
+table rsp_GeneratedDocument
+{	condSubs  offerContractID  actSubs  offeredContractDocument
+    condVals  "offerContract001" actVals  "THE_CONTRACT_OFFER"
+}

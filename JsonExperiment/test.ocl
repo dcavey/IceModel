@@ -1,0 +1,21 @@
+datamsg TestData {
+	"accountID" : 123,
+	"book" : [ "aaa", "aaa"],
+	"film" : {},
+	"play":  [ { "list" : ["tt"] } ]  
+}
+
+datamsg ding {
+	"components" : [ "remoteControl" , "ledDisplay", "hdmiConnector"  ],
+	
+  	"componentsourcing": [
+    	"remoteControl : Taiwan",
+    	"ledDisplay : China",
+    	"hdmiConnector : HongKong" 	], 
+	 
+	"component": [
+    	{ "componentType" : "remoteControl", "country" : "South Korea", "manufacturer" : "Samsung" },
+    	{ "componentType": "display", "country": "China", "manufacturer" : "Lenovo" }
+     ]
+ 	
+}

@@ -1,0 +1,20 @@
+
+
+relation personRelatedToCustomer { 
+	key 	personID		refKey 		customerID 		
+	keyVal "person001"		refKeyVals  "customer001"  
+	keyVal "person002"		refKeyVals  "customer002" 
+	keyVal "person003"		refKeyVals  "customer003"  
+}
+
+relation customerRelatedToContract {
+	key 	customerID 		refKey 		contractID
+	keyVal "customer001"	refKeyVals  "contract010"  
+	keyVal "customer002"	refKeyVals  "contract020" 
+}   
+
+relation pricingRelatedToProduct {
+	key 	offerProductType	refKey 		productType
+	keyVal "KO_SF"				refKeyVals  "KOA_SF"  
+}   
+

@@ -1,0 +1,4 @@
+table decisionPricing
+{	condSubs ctrCreditMargin 	actSubs  offerMargin
+    condVals "ALL" actVals "130"
+}

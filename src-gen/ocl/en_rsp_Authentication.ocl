@@ -1,0 +1,6 @@
+table rsp_Authentication
+{	condSubs  userLogonID   authNMeans   userLogonToken  actSubs  personID
+    condVals  "user001" "IsabelCard" "XXX" actVals  "person001"
+    condVals  "user002" "UserPassword" "YYY" actVals  "person002"
+    condVals  "user003" "UserPassword" "ZZZ" actVals  "person003"
+}

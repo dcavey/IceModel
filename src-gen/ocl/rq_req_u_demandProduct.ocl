@@ -1,0 +1,5 @@
+req req_u_demandProduct 
+{	inputParams: 
+		key demandProductType value "KOA_SF"	key demandCreditAmount value "10000"	key demandCreditDuration value "12"	
+    outputItems: 
+}

@@ -1,0 +1,64 @@
+import DomainTypes.* 
+
+request req_s_identifyCustomer {
+	inputParams:		key personID  	
+	outputItems:		key customerID
+	targetComponent:	KL
+} 
+
+request req_s_getProductPricing {
+	inputParams:		key offerProductType 
+	outputItems:		key transferPrice
+						key margin 
+}
+
+request req_s_getProductProductCharacteristics {
+	inputParams:		key offerProductType 
+	outputItems:		key productFiche 
+}
+
+entity rsp_ProductFiche{ 			// simulates the response to the "Get Product Fiche" request
+	key 	productID 	attr 		productFiche 						
+	keyVals	"prod001"	attrVals	"THE_INSTALLMENT_LOAN_PRODUCT_FICHE" 
+} 
+
+request req_s_createCreditContract { 
+	inputParams:		key demandProductType		  
+						key demandCreditAmount		 
+						key demandCreditDuration	
+						key contractStatus 		
+	outputItems:		key offerContractID 
+}
+
+entity rsp_CreatedOffer{ 			// simulates the response to the "Create contract" request
+	key  	demandProductType 	offerProductType	attr 		offerContractID 	offerAmount offerDuration 	offerRate 	offerMargin 
+	keyVals	"KOA_SF"			"KOA_SF"			attrVals	"offerContract001"	"10000"		"12"			"410"	    "110"
+} 
+
+request req_s_generateDocument { 
+	inputParams:		key offerContractID		
+						key offerAmount		
+						key offerDuration	
+						key offerRate
+						key offerMargin 
+	outputItems:		key offeredContractDocument
+}
+
+entity rsp_GeneratedDocument { 		// simulates the response from the "Document Generator" request
+	key  	offerContractID 		attr 		offeredContractDocument  
+	keyVals	"offerContract001"		attrVals	"THE_CONTRACT_OFFER" 
+} 
+
+request req_s_requestToSignDocument {
+	inputParams:		key offeredContractDocument
+						key personID		
+	outputItems:		key signedContractDocument
+}
+
+request req_s_updateCreditContract {
+	inputParams:		key offerContractID			
+						key contractStatus 			
+	outputItems:		// contact is updated 
+}
+
+

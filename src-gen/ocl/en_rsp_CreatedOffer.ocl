@@ -1,0 +1,4 @@
+table rsp_CreatedOffer
+{	condSubs  demandProductType   offerProductType  actSubs  offerContractID offerAmount offerDuration offerRate offerMargin
+    condVals  "KOA_SF" "KOA_SF" actVals  "offerContract001" "10000" "12" "410" "110"
+}

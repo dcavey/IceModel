@@ -1,0 +1,5 @@
+table decisionFundRelease
+{	condSubs offerContractID  contractStatus 	actSubs  fundReleaseDecision
+    condVals "offerContract001" "VAN_KRACHT" actVals "YES"
+    condVals "ALL" "NE VAN_KRACHT" actVals "NO"
+}

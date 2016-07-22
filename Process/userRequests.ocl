@@ -1,0 +1,49 @@
+import DomainTypes.* 
+
+request req_u_logon { 
+	inputParams:		key userLogonID		value	"user001"
+						key authNMeans		value	"IsabelCard"	// either "Bank Card, for EBW Pro" or "Isabel Card, for PCBB"  
+						key userLogonToken	value	"XXX"
+	outputItems:		// key personID	
+}
+
+request req_u_getProductsForNeed {
+	inputParams:		key need value "Betalen_Vakantiegeld_personeel"
+	outputItems:		// key offerProductType
+}
+
+request req_u_demandProduct {  
+	inputParams:
+		key	demandProductType  		value "KOA_SF"
+		key demandCreditAmount		value "10000"
+		key demandCreditDuration	value "12"
+	outputItems:		// key demandDecision
+}
+
+request req_u_signContract { 
+	inputParams:		key signingPerson			value	"person001"
+						key authZMeans				value	"IsabelCard"	// either "Bank Card, for EBW Pro" or "Isabel Card, for PCBB"  
+						key userContractSignature	value	"SIGN_X"
+						key signSubjectID			value	"THE_CONTRACT_OFFER"
+	outputItems:		// key signedContractDocument	
+}
+
+request req_u_releaseFunds { 
+	inputParams:		key offerContractID			value	"offerContract001"
+						key fundReleaseAmount 		value	"12000"
+	outputItems:		// key fundReleaseDecision
+}
+
+entity rsp_ValidatedSignature {
+	key 	signingPerson	 authZMeans		userContractSignature   signSubjectID 			attr 		signedContractDocument
+	keyVals	"person001"		"IsabelCard"	"SIGN_X"				"THE_CONTRACT_OFFER"	attrVals	"THE_SIGNED_CONTRACT"
+	keyVals	"person002"		"BankCard"		"SIGN_Y"				"THE_CONTRACT_OFFER"	attrVals	"THE_SIGNED_CONTRACT"
+	keyVals	"person003"		"IsabelCard"	"SIGN_Z"				"THE_CONTRACT_OFFER"	attrVals	"THE_SIGNED_CONTRACT"
+}  
+
+entity rsp_Authentication { 
+	key 	userLogonID  authNMeans 	userLogonToken   attr 		personID
+	keyVals	"user001"	"IsabelCard"	"XXX"			attrVals	"person001"
+	keyVals	"user002"	"UserPassword"	"YYY"			attrVals	"person002"
+	keyVals	"user003"	"UserPassword"	"ZZZ"			attrVals	"person003"
+}

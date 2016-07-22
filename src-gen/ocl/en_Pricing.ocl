@@ -1,0 +1,4 @@
+table Pricing
+{	condSubs  offerProductType  actSubs  transferPrice margin
+    condVals  "KOA_SF" actVals  "400" "60"
+}

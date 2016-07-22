@@ -1,0 +1,6 @@
+table Customer
+{	condSubs  customerID  actSubs  dataOfCustomerOnboarding
+    condVals  "person001" actVals  "20150101"
+    condVals  "person002" actVals  "20150202"
+    condVals  "person003" actVals  "20150303"
+}

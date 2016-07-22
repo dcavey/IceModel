@@ -1,0 +1,5 @@
+table decisionCreditDemand
+{	condSubs customerRating  customerRatingChange  demandProductType  demandCreditAmount 	actSubs  demandDecision
+    condVals "NE BLACK" "NE WORSE" "KOA_SF" "LE 12000" actVals "YES"
+    condVals "ALL" "ALL" "ALL" "GT_12000" actVals "NO"
+}

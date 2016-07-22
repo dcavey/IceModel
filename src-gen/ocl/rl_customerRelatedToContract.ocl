@@ -1,0 +1,8 @@
+typedef	genericID : string
+domaintype setOf_contractID : genericID
+ 
+table customerRelatedToContract
+{	condSubs   customerID 	actSubs  contractID
+    condVals  "customer001" actVals "{ contract010,}"
+    condVals  "customer002" actVals "{ contract020,}"
+}

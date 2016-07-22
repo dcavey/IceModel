@@ -1,0 +1,28 @@
+import DomainTypes.* 
+
+table decisionCreditDemand {
+	condSubs customerRating	customerRatingChange	demandProductType 	demandCreditAmount 	actSubs	demandDecision 
+	condVals "NE BLACK"		"NE WORSE"				"KOA_SF"			"LE 12000" 			actVals "YES"
+	condVals "ALL"			"ALL"					"ALL"				"GT_12000"	 		actVals "NO"
+	// decision table is not complete !!! for demo purposes only
+} 
+
+table decisionPricing {
+	condSubs ctrCreditMargin 	actSubs	offerMargin 
+	condVals "ALL"				actVals "130"
+} 
+
+table decisionProductForNeed {
+	condSubs need 								actSubs	productID 	offerProductType 
+	condVals "Betalen_Vakantiegeld_personeel"	actVals "prod001" 	"KOA_SF"
+}
+
+table decisionFundRelease {
+	condSubs offerContractID 			contractStatus 		actSubs	fundReleaseDecision  
+	condVals "offerContract001"			"VAN_KRACHT"		actVals "YES"
+	condVals "ALL"						"NE VAN_KRACHT"		actVals "NO"	
+}
+
+
+ 
+ 

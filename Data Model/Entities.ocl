@@ -1,0 +1,87 @@
+
+entity Person{
+	key 	personID 	attr 		personName
+	keyVals	"person001"	attrVals	"Jan"
+	keyVals	"person002"	attrVals	"Piet" 	
+	keyVals	"person003"	attrVals	"Pol" 		
+	relationship personRelatedToCustomer: many Customer    
+}
+
+entity Borrower{
+	key		borrowerID 		attr 		dataOfCustomerOnboarding
+	keyVals	"person001"		attrVals	"20150101"
+	keyVals	"person002"		attrVals	"20150202"
+	keyVals	"person003"		attrVals	"20150303"
+	relationship customerRelatedToContract: many Contract 
+}
+
+entity Customer{
+	key		customerID 		attr 		dataOfCustomerOnboarding
+	keyVals	"person001"		attrVals	"20150101"
+	keyVals	"person002"		attrVals	"20150202"
+	keyVals	"person003"		attrVals	"20150303"
+	relationship customerRelatedToContract: many Contract 
+}
+
+entity CustomerRating{
+	key		customerID 		
+	attr	customerRating	
+			customerRatingChange
+							
+	keyVals	 	"customer001"	
+	attrVals 	"GREEN"
+			 	"BETTER"
+			 	
+	keyVals	 	"customer002"
+	attrVals "	BLACK"
+	   		 	"WORSE"
+	   		 	
+	keyVals		"customer003"	
+	attrVals	"RED"
+				"WORSE"
+}
+ 
+entity Product{
+	key 	productID 	attr 		productType		productFamily 		 
+	keyVals	"prod001"	attrVals	"KOA_SF"		"Krediet_op_afbetaling" 
+	keyVals	"prod002"	attrVals	"KOA_Auto"		"Krediet_op_afbetaling"	
+}
+
+entity Pricing{  
+	key 	offerProductType 	attr 		transferPrice 	margin 
+	keyVals	"KOA_SF"			attrVals	"400"			"60"
+	relationship pricingRelatedToProduct: Product 
+}
+
+
+entity Contract {
+	key 	contractID		attr		ctrProductType ctrCreditAmount ctrCreditDuration ctrCreditRate ctrCreditMargin  
+	keyVals "contract010"	attrVals	"KOA_SF"			"11000"		 	"11"			  "410"	   		"110" 		 
+	keyVals "contract020"	attrVals	"KOA_SF"			"12000"		 	"12" 		 	  "320" 	   	"120"
+	keyVals "none"			attrVals	"none"				"none"		 	"none"			  "none"	    "none" 
+}
+
+/*
+entity Funds{
+	key 	fundReleaseID 	attr 		fundReleaseAmount
+	keyVals	"fr001"			attrVals	"40000"
+}
+*/
+
+/*
+entity User{ 
+	key 	userLogonID attr 		userlogonDateTime
+	keyVals "user001"	attrVals	"20160101"
+	keyVals "user002"	attrVals	"20160202"
+	keyVals "user003"	attrVals	"20160303" 
+} 
+*/
+
+/* 
+entity Simulation{
+	key  	simulationID 	attr 		simulationDocument 			simulationAmount 	simulationDuration
+	keyVals	"simulation001" attrVals 	"THE_SIMULATION_DOCUMENT"	"10000"		 		"12"
+	keyVals	"simulation002" attrVals 	"THE_SIMULATION_DOCUMENT"	"20000"		 		"24"	
+	keyVals	"simulation003"	attrVals 	"THE_SIMULATION_DOCUMENT"	"30000"		 		"36"		
+}
+*/

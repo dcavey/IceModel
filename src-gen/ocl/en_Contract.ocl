@@ -1,0 +1,6 @@
+table Contract
+{	condSubs  contractID  actSubs  ctrProductType ctrCreditAmount ctrCreditDuration ctrCreditRate ctrCreditMargin
+    condVals  "contract010" actVals  "KOA_SF" "11000" "11" "410" "110"
+    condVals  "contract020" actVals  "KOA_SF" "12000" "12" "320" "120"
+    condVals  "none" actVals  "none" "none" "none" "none" "none"
+}

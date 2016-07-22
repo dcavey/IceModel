@@ -1,0 +1,6 @@
+req req_s_generateDocument 
+{	inputParams: 
+		key offerContractID value "null"	key offerAmount value "null"	key offerDuration value "null"	key offerRate value "null"	key offerMargin value "null"	
+    outputItems: 
+    	key offeredContractDocument  
+}

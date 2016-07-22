@@ -1,0 +1,149 @@
+
+// definitions relevant for the ICE3 business
+
+domaintype personName: genericName      
+domaintype needID: genericString   
+domaintype need: enumeration 
+domaintype needAmount: amount
+domaintype needDuration: duration
+domaintype productID: genericID
+domaintype productType: genericID
+domaintype productFamily: genericName
+domaintype productFiche: genericDescription
+
+
+/*
+ * User Identification
+ */
+domaintype logonRequestID : genericString
+domaintype userSessionID : genericID
+domaintype signRequestID : genericString
+domaintype userLogonID: genericString
+domaintype userSigningID: genericString
+domaintype userlogonDateTime : timestamp
+domaintype userLogonToken : signatureToken
+domaintype userContractSignature : signatureToken
+domaintype userPassword: signatureToken
+domaintype userTransctionSignature: signatureToken
+domaintype signSubjectID: genericString
+
+
+/*
+ * Customer and Contract referential data
+ */
+domaintype personID: genericID
+domaintype customerID: personID 		// 	this is a simplification for Credits!
+domaintype borrowerID: genericID		// 	this replaces customer ID for CREDITS
+domaintype creditContractID:  genericID
+domaintype contractID: genericID
+domaintype ctrProductType : enumeration
+domaintype ctrCreditAmount : amount
+domaintype ctrCreditDuration : duration
+domaintype ctrCreditRate : basispoint
+domaintype ctrCreditMargin : basispoint
+domaintype dataOfCustomerOnboarding : genericDate 
+domaintype contractCreationDate: genericDate
+domaintype contractStatus: enumeration		// BELOOFD, VAN KRACHT, and many others
+
+/*
+ * Signature
+ */
+domaintype signatureID : genericID
+domaintype signatureMeans: enumeration	// e.g. "M2" , "e-Notary"
+domaintype signatureDateTime: timestamp 
+domaintype signingPerson: personID
+domaintype authNMeans : enumeration
+domaintype authZMeans : enumeration   
+domaintype authStrength : genericString  
+ 
+
+/*
+ * Fund release
+ */
+domaintype fundReleaseDemandID : genericID
+domaintype fundReleaseAmount: amount
+domaintype fundReleaseDecision: genericDecision
+domaintype fundReleaseID: genericDecision
+domaintype accountID: genericString
+domaintype fundReleaseJustification: document
+
+/*
+ * Demand 
+ */
+domaintype demandID : genericID
+domaintype demandType : enumeration
+domaintype demandStatus: enumeration
+domaintype demandProductType : enumeration
+domaintype demandCreditAmount : amount
+domaintype demandCreditDuration : duration
+domaintype customerRating: enumeration
+domaintype customerRatingChange : enumeration	// worse, equal or better 
+domaintype offerContractID : genericID
+
+/* 
+ * Proposal and Offer
+ */
+domaintype simulationID: genericID
+domaintype simulationDocument: document 
+domaintype simulationAmount: amount
+domaintype simulationDuration: duration
+domaintype offerAmount : amount
+domaintype offerDuration : duration
+domaintype offerRate : basispoint
+domaintype offerMargin : basispoint
+domaintype offerProductType : enumeration
+domaintype offerID: genericString
+domaintype offerIssueDateTime: timestamp
+domaintype offeredContractDocument: document
+domaintype signedContractDocument: document
+
+/*
+ * Decision & Scoring
+ */
+domaintype creditDemandScoring: genericScoring 
+domaintype demandDecision: genericDecision 
+domaintype decisionRationale: genericDescription
+domaintype preApprovalRange: genericString
+
+/*
+ * --------------- Pricing ------------------------- 
+ */
+domaintype discount: basispoint
+domaintype targetRate: basispoint
+domaintype transferPrice : basispoint
+domaintype clientRate: basispoint
+domaintype margin: basispoint
+domaintype pricingID: genericID  
+
+
+// housekeeping and technical
+domaintype contextID: genericString
+domaintype rqID: genericString      
+
+
+// definitions "just for demo purposes" 
+domaintype colorOfEyes: enumeration
+domaintype colorOfHair: enumeration
+
+
+
+// basic definition elements
+typedef	genericName : string
+typedef	genericNumber : string
+typedef genericString : string
+typedef genericID: integer
+typedef genericScoring: string
+typedef genericDecision: string
+typedef genericDate: string
+typedef year: string
+typedef basispoint: string
+typedef genericSet: string
+typedef genericDescription: string
+typedef enumeration: string
+typedef timestamp: string
+typedef document: string
+typedef amount: string
+typedef duration: string
+typedef signatureToken: string
+
+

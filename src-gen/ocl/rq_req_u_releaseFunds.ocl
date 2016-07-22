@@ -1,0 +1,5 @@
+req req_u_releaseFunds 
+{	inputParams: 
+		key offerContractID value "offerContract001"	key fundReleaseAmount value "12000"	
+    outputItems: 
+}

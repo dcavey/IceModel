@@ -1,0 +1,6 @@
+req req_s_requestToSignDocument 
+{	inputParams: 
+		key offeredContractDocument value "null"	key personID value "null"	
+    outputItems: 
+    	key signedContractDocument  
+}

@@ -1,0 +1,4 @@
+table decisionProductForNeed
+{	condSubs need 	actSubs  productID offerProductType
+    condVals "Betalen_Vakantiegeld_personeel" actVals "prod001" "KOA_SF"
+}

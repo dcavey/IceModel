@@ -1,0 +1,6 @@
+table CustomerRating
+{	condSubs  customerID  actSubs  customerRating customerRatingChange
+    condVals  "customer001" actVals  "GREEN" "BETTER"
+    condVals  "customer002" actVals  "	BLACK" "WORSE"
+    condVals  "customer003" actVals  "RED" "WORSE"
+}

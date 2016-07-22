@@ -1,0 +1,5 @@
+req req_u_signContract 
+{	inputParams: 
+		key signingPerson value "person001"	key authZMeans value "IsabelCard"	key userContractSignature value "SIGN_X"	key signSubjectID value "THE_CONTRACT_OFFER"	
+    outputItems: 
+}

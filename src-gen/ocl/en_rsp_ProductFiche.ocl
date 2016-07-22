@@ -1,0 +1,4 @@
+table rsp_ProductFiche
+{	condSubs  productID  actSubs  productFiche
+    condVals  "prod001" actVals  "THE_INSTALLMENT_LOAN_PRODUCT_FICHE"
+}

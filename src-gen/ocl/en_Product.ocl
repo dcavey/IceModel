@@ -1,0 +1,5 @@
+table Product
+{	condSubs  productID  actSubs  productType productFamily
+    condVals  "prod001" actVals  "KOA_SF" "Krediet_op_afbetaling"
+    condVals  "prod002" actVals  "KOA_Auto" "Krediet_op_afbetaling"
+}

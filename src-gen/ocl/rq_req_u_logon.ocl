@@ -1,0 +1,5 @@
+req req_u_logon 
+{	inputParams: 
+		key userLogonID value "user001"	key authNMeans value "IsabelCard"	key userLogonToken value "XXX"	
+    outputItems: 
+}

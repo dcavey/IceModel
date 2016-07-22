@@ -1,0 +1,6 @@
+table rsp_ValidatedSignature
+{	condSubs  signingPerson   authZMeans   userContractSignature   signSubjectID  actSubs  signedContractDocument
+    condVals  "person001" "IsabelCard" "SIGN_X" "THE_CONTRACT_OFFER" actVals  "THE_SIGNED_CONTRACT"
+    condVals  "person002" "BankCard" "SIGN_Y" "THE_CONTRACT_OFFER" actVals  "THE_SIGNED_CONTRACT"
+    condVals  "person003" "IsabelCard" "SIGN_Z" "THE_CONTRACT_OFFER" actVals  "THE_SIGNED_CONTRACT"
+}

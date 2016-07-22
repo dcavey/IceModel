@@ -1,0 +1,6 @@
+req req_s_getProductPricing 
+{	inputParams: 
+		key offerProductType value "null"	
+    outputItems: 
+    	key transferPrice  	key margin  
+}

@@ -1,0 +1,22 @@
+
+datamsg authenticateUser
+{	"req":	{ "userLogonID" : "user001", "authNMeans" : "IsabelCard", "userLogonToken" : "XXX" } ,
+	"rsp":	{ "personID": {} } 
+}
+
+svcop authenticateUser
+{
+	req : { "userLogonID" : {}, "authNMeans" : {}, "userLogonToken" : {} } 
+	rsp : { "personID": {} } 
+}  
+
+svcop logonUser
+{
+	req : { "userLogonID" : {}, "authNMeans" : {}, "userLogonToken" : {} }  
+	rsp : { "userLogonID" : {} }
+}   
+
+ 
+
+
+  

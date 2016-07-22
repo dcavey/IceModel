@@ -1,0 +1,6 @@
+req req_s_identifyCustomer 
+{	inputParams: 
+		key personID value "null"	
+    outputItems: 
+    	key customerID  
+}

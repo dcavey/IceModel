@@ -1,0 +1,6 @@
+req req_s_createCreditContract 
+{	inputParams: 
+		key demandProductType value "null"	key demandCreditAmount value "null"	key demandCreditDuration value "null"	key contractStatus value "null"	
+    outputItems: 
+    	key offerContractID  
+}

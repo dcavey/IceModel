@@ -1,0 +1,7 @@
+typedef	genericID : string
+domaintype setOf_productType : genericID
+ 
+table pricingRelatedToProduct
+{	condSubs   offerProductType 	actSubs  productType
+    condVals  "KO_SF" actVals "{ KOA_SF,}"
+}

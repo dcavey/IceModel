@@ -1,0 +1,6 @@
+table Person
+{	condSubs  personID  actSubs  personName
+    condVals  "person001" actVals  "Jan"
+    condVals  "person002" actVals  "Piet"
+    condVals  "person003" actVals  "Pol"
+}

@@ -1,0 +1,5 @@
+req req_s_updateCreditContract 
+{	inputParams: 
+		key offerContractID value "null"	key contractStatus value "null"	
+    outputItems: 
+}

@@ -1,0 +1,6 @@
+req req_s_getProductProductCharacteristics 
+{	inputParams: 
+		key offerProductType value "null"	
+    outputItems: 
+    	key productFiche  
+}

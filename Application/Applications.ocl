@@ -1,0 +1,34 @@
+/*-------------------------------------------------------------------------------------------------------
+ * new applications
+ */
+application ICAL
+application ICPL
+application BRM		// business rules management application (use ICE initially)
+
+
+/*-------------------------------------------------------------------------------------------------------
+ *  used applications (no change)
+ */ 
+application DBKD
+application BRS
+application KL
+application OE
+application CKO
+application DocOne
+application DocMgtProductFiche		// is this DocServer ?
+application eCarina
+application MSMC
+application CIS						 
+application FundReleaseApplication	// which application is this?
+
+
+/*-------------------------------------------------------------------------------------------------------
+ * updated applications
+ */
+
+ 
+ /*
+  * Placeholder for yet to be defined application
+  */
+ application TOBEDEFINED
+ 
