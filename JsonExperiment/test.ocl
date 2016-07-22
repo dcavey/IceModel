@@ -1,5 +1,5 @@
 datamsg TestData {
-	"accountID" : 123,
+	"accountID" : "123",
 	"book" : [ "aaa", "aaa"],
 	"film" : {},
 	"play":  [ { "list" : ["tt"] } ]  
