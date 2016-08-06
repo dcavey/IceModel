@@ -50,7 +50,7 @@ entity Product{
 entity Pricing{  
 	key 	offerProductType 	attr 		transferPrice 	margin 
 	keyVals	"KOA_SF"			attrVals	"400"			"60"
-	relationship pricingRelatedToProduct: Product 
+	relationship pricingRelatedToProduct:  Product 
 }
 
 
