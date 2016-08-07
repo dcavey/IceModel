@@ -4,17 +4,38 @@ datamsg authenticateUser
 	"rsp":	{ "personID": {} } 
 }
 
-svcop authenticateUser
-{
-	req : { "userLogonID" : {}, "authNMeans" : {}, "userLogonToken" : {} } 
-	rsp : { "personID": {} } 
-}  
-
 svcop logonUser
 {
 	req : { "userLogonID" : {}, "authNMeans" : {}, "userLogonToken" : {} }  
 	rsp : { "userLogonID" : {} }
-}   
+}
+
+svcop authenticateUser
+{
+	req : { "userLogonID" : {}, "authNMeans" : {}, "userLogonToken" : {} } 
+	rsp : { "personID": {} }  
+}  
+
+svcop authenticateRequestor
+{
+	req : { "requestorLogonID" : {}, "requestorAuthNMeans" : {}, "requestorLogonToken" : {} } 
+	rsp : { "personID": {} }  
+}  
+
+svcop authenticatePartner
+{
+	req : { "partnerLogonID" : {}, "partnerAuthNMeans" : {}, "partnerLogonToken" : {} } 
+	rsp : { "personID": {} }  
+}  
+
+
+svcop authenticatePerson
+{
+	req : { "logonID" : {}, "authNMeans" : {}, "logonToken" : {} } 
+	rsp : { "personID": {} } 
+}  
+  
+
 
  
 

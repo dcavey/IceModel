@@ -47,3 +47,11 @@ entity rsp_Authentication {
 	keyVals	"user002"	"UserPassword"	"YYY"			attrVals	"person002"
 	keyVals	"user003"	"UserPassword"	"ZZZ"			attrVals	"person003"
 }
+
+entity rsp_PersonAuthentication { 
+	key 	logonID  	authNMeans 		logonToken   attr 		personID
+	keyVals	"user001"	"IsabelCard"	"XXX"			attrVals	"person001"
+	keyVals	"user002"	"UserPassword"	"YYY"			attrVals	"person002"
+	keyVals	"user003"	"UserPassword"	"ZZZ"			attrVals	"person003"
+	keyVals	"user004"	"IsabelCard"	"YYY"			attrVals	"person004"
+}

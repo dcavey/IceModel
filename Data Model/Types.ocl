@@ -27,6 +27,25 @@ domaintype userPassword: signatureToken
 domaintype userTransctionSignature: signatureToken
 domaintype signSubjectID: genericString
 
+domaintype requestorLogonID: logonID
+domaintype requestorSigningID: signingID
+domaintype requestorlogonDateTime : logonDateTime
+domaintype requestorLogonToken : logonToken
+domaintype requestorAuthNMeans : authNMeans
+domaintype requestorAuthZMeans : authZMeans  
+
+domaintype partnerLogonID: logonID
+domaintype partnerSigningID: signingID
+domaintype partnerlogonDateTime : logonDateTime
+domaintype partnerLogonToken : logonToken
+domaintype partnerAuthNMeans : authNMeans
+domaintype partnerAuthZMeans : authZMeans  
+
+domaintype logonID: genericString
+domaintype signingID: genericString
+domaintype logonDateTime : timestamp
+domaintype logonToken : signatureToken
+
 
 /*
  * Customer and Contract referential data
